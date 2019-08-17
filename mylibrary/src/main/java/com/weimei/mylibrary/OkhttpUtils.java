@@ -47,7 +47,7 @@ public class OkhttpUtils {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                String s = response.body().toString();
+                String s = response.body().string();
                 onOkhttpLisener.onSucceed(s);
             }
         });
